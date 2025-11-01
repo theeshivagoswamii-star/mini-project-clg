@@ -1,0 +1,121 @@
+html
+<div id="dashboardContent">
+    <div class="welcome-banner">
+        <div class="welcome-text">
+            <h2>Welcome back, <span id="studentName">Shiva Giri</span>!</h2>
+            <p>Here's your academic overview for today</p>
+        </div>
+        <div class="date-display">
+            <i class="fas fa-calendar-alt"></i>
+            <span id="currentDate">November 21, 2024</span>
+        </div>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card attendance-stat">
+            <div class="stat-icon">
+                <i class="fas fa-clipboard-check"></i>
+            </div>
+            <div class="stat-info">
+                <h3>Attendance</h3>
+                <div class="stat-value" id="attendancePercent">85%</div>
+                <div class="stat-trend positive">
+                    <i class="fas fa-arrow-up"></i>
+                    <span>5% from last month</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="stat-card fees-stat">
+            <div class="stat-icon">
+                <i class="fas fa-rupee-sign"></i>
+            </div>
+            <div class="stat-info">
+                <h3>Fees Status</h3>
+                <div class="stat-value paid">Paid</div>
+                <div class="stat-due">Next due: Dec 15, 2024</div>
+            </div>
+        </div>
+
+        <div class="stat-card notices-stat">
+            <div class="stat-icon">
+                <i class="fas fa-bullhorn"></i>
+            </div>
+            <div class="stat-info">
+                <h3>New Notices</h3>
+                <div class="stat-value" id="noticeCount">3</div>
+                <div class="stat-desc">Unread messages</div>
+            </div>
+        </div>
+
+        <div class="stat-card classes-stat">
+            <div class="stat-icon">
+                <i class="fas fa-book"></i>
+            </div>
+            <div class="stat-info">
+                <h3>Today's Classes</h3>
+                <div class="stat-value" id="todayClasses">4</div>
+                <div class="stat-desc">Scheduled classes</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard-content-grid">
+        <!-- Quick Actions -->
+        <div class="content-card quick-actions">
+            <h3>Quick Actions</h3>
+            <div class="action-buttons">
+                <button class="action-btn" onclick="viewAttendance()">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>View Attendance</span>
+                </button>
+                <button class="action-btn" onclick="payFees()">
+                    <i class="fas fa-credit-card"></i>
+                    <span>Pay Fees</span>
+                </button>
+                <button class="action-btn" onclick="viewNotices()">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>Check Notices</span>
+                </button>
+                <button class="action-btn" onclick="downloadMaterial()">
+                    <i class="fas fa-download"></i>
+                    <span>Study Material</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Recent Attendance -->
+        <div class="content-card recent-attendance">
+            <div class="card-header">
+                <h3>Recent Attendance</h3>
+                <a href="attendance.html" class="view-all">View All</a>
+            </div>
+            <div class="attendance-list" id="recentAttendance">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+
+        <!-- Upcoming Events -->
+        <div class="content-card upcoming-events">
+            <div class="card-header">
+                <h3>Upcoming Events</h3>
+            </div>
+            <div class="events-list" id="upcomingEvents">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+
+        <!-- Quick Notice Board -->
+        <div class="content-card notice-board">
+            <div class="card-header">
+                <h3>Latest Notices</h3>
+                <a href="notices.html" class="view-all">View All</a>
+            </div>
+            <div class="notices-list" id="latestNotices">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,80 @@
+html
+<div id="markAttendanceContent">
+    <div class="page-header">
+        <h2>Mark Attendance</h2>
+        <div class="attendance-info">
+            <span id="currentClassInfo">Class: B.Tech CSE - Semester 3</span>
+            <span id="currentSubjectInfo">Subject: Data Structures</span>
+        </div>
+    </div>
+
+    <div class="attendance-controls">
+        <div class="control-group">
+            <div class="form-group">
+                <label for="attendanceDate">Date</label>
+                <input type="date" id="attendanceDate" value="<?php echo date('Y-m-d'); ?>">
+            </div>
+            <div class="form-group">
+                <label for="attendanceClass">Class</label>
+                <select id="attendanceClass" onchange="loadClassStudents()">
+                    <option value="">Select Class</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="attendanceSubject">Subject</label>
+                <select id="attendanceSubject">
+                    <option value="">Select Subject</option>
+                </select>
+            </div>
+        </div>
+        <div class="control-actions">
+            <button class="btn btn-secondary" onclick="loadPreviousAttendance()">
+                <i class="fas fa-history"></i>
+                Load Previous
+            </button>
+            <button class="btn btn-primary" onclick="submitAttendance()">
+                <i class="fas fa-save"></i>
+                Save Attendance
+            </button>
+        </div>
+    </div>
+
+    <div class="students-attendance-section">
+        <div class="section-header">
+            <h3>Students List</h3>
+            <div class="bulk-actions">
+                <button class="btn btn-sm btn-outline" onclick="markAllPresent()">
+                    Mark All Present
+                </button>
+                <button class="btn btn-sm btn-outline" onclick="markAllAbsent()">
+                    Mark All Absent
+                </button>
+            </div>
+        </div>
+
+        <div class="students-list" id="studentsAttendanceList">
+            <!-- Dynamic student rows -->
+        </div>
+    </div>
+
+    <div class="attendance-summary">
+        <div class="summary-item">
+            <span class="label">Total Students:</span>
+            <span class="value" id="totalStudentsCount">0</span>
+        </div>
+        <div class="summary-item">
+            <span class="label">Present:</span>
+            <span class="value present" id="presentCount">0</span>
+        </div>
+        <div class="summary-item">
+            <span class="label">Absent:</span>
+            <span class="value absent" id="absentCount">0</span>
+        </div>
+        <div class="summary-item">
+            <span class="label">Percentage:</span>
+            <span class="value" id="attendancePercentage">0%</span>
+        </div>
+    </div>
+</div>
+
+

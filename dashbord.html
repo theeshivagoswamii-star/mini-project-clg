@@ -1,0 +1,103 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Smart Attendance System</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="assets/logo.png" alt="Logo" class="sidebar-logo">
+            <h2>Edu-Tech</h2>
+        </div>
+
+        <ul class="sidebar-nav">
+            <li class="nav-item active">
+                <a href="dashboard.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="attendance.html" class="nav-link">
+                    <i class="fas fa-clipboard-check"></i>
+                    <span>Attendance</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="fees.html" class="nav-link">
+                    <i class="fas fa-rupee-sign"></i>
+                    <span>Fees</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="notices.html" class="nav-link">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>Notices</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="study-material.html" class="nav-link">
+                    <i class="fas fa-book"></i>
+                    <span>Study Material</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="profile.html" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <button class="btn-logout" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <!-- Top Header -->
+        <header class="top-header">
+            <div class="header-left">
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 id="pageTitle">Dashboard</h1>
+            </div>
+
+            <div class="header-right">
+                <div class="user-info">
+                    <img src="assets/user-avatar.png" alt="User" class="user-avatar">
+                    <span class="user-name" id="userName">John Doe</span>
+                    <span class="user-role" id="userRole">Student</span>
+                </div>
+                <div class="notification-bell">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">3</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Page Content -->
+        <main class="page-content" id="pageContent">
+            <!-- Dynamic content will be loaded here -->
+            <div id="dashboardContent">
+                <!-- Dashboard specific content -->
+            </div>
+        </main>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
